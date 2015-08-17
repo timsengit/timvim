@@ -16,8 +16,8 @@ HISTCONTROL=ignoreboth
 #shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=100000
+HISTSIZE=10000
+HISTFILESIZE=0
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -57,14 +57,15 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 #if [ "$color_prompt" = yes ]; then
-    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '$的颜色是亮绿的
+
      #PS1='${debian_chroot:+($debian_chroot)}\[\033[1;31;1m\]\u@\#:\w\$ '
 #else
  #   PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 #fi
    #PS1='${debian_chroot:+($debian_chroot)}\[\033[1;31;1m\]\u@\[\033[1;32;42m\]\#:\w\$ '
    #PS1='\[\033[1;36;1m\]\u@\[\033[1;31;1m\]\#:\[\033[1;32;1m\]\w\[\033[1;33;1m\]\$\[\033[1;32;1m\]'
-    PS1='\[\033[1;36;1m\]\u@\[\033[1;31;1m\]\#:\[\033[1;32;1m\]\w \[\033[01;34;1m\]\$ \[\033[01;32;1m\]'
+    PS1='\[\033[1;36;1m\]\u@\[\033[1;31;1m\]\#:\[\033[1;32;1m\]\w \[\033[01;34;1m\]\$ \[\033[00m\]'
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
